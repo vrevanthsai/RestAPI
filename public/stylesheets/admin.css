@@ -1,0 +1,71 @@
+/* CSS for both Admin page and Success page */
+/* Admin page CSS */
+body{
+    background-color: darkgray;
+}
+h1{
+    color: red;
+    text-align: center;
+}
+.admin-form{
+    display: flex;
+    flex-direction: column;
+}
+.admin-form input{
+    border-radius: 10px;
+}
+.detail{
+    padding: 10px;
+    font-size: 20px;
+}
+#deleteone{
+    width: 240px;
+}
+.operations{
+    display: flex;
+    justify-content: space-around;
+}
+.operations form{
+    display: flex;
+    flex-direction: column;
+}
+.btn-success{
+    margin: 15px;
+}
+
+
+/* success page css */
+.success-span{
+    /* font-size: 40px; */
+    color: rgb(252, 14, 14);
+    padding: 10px;
+}
+.success-link{
+    text-decoration: none;
+    font-size: 26px;
+    background-color: #000000;
+    padding: 8px;
+    border-radius: 30px;
+    color: yellow;
+    align-content: center;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 17px; */
+    justify-content: space-around;
+    row-gap: 20px;
+    margin-bottom: 40px;
+}
+.success-header{
+    color: green;
+}
+.card img{
+    border-bottom: 2px solid;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    color: #c120dc;
+    margin-bottom: 40px;
+}

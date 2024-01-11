@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success page</title>
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+</head>
+<body>
+    <div class="container">
+        <br />
+        <h1 class="success-header"> Successfully Data added and Showing all Data-<a class="success-link" href="/">Add-More</a> </h1>
+        <br />
+        <h2>See All Products -OR- <a class="success-link" href="/api/products/testing">See Data in JSON Formate</a></h2>
+        <div class="content">
+            <!-- <span class="success-span">See your data here:</span> -->
+            <% productData.forEach(function(post){ %>
+                <div class="card" style="width: 18rem;">
+                  <img src="<%= post.image %>" class="card-img-top" alt="<%= post.name %>">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Name:<span class="success-span"><%= post.name %></span> 
+                    </h5>
+                    <h5 class="card-title">
+                      Description: <span class="success-span"><%= post.description %></span> 
+                    </h5>
+                    <h5 class="card-title">
+                        Price:<span class="success-span"><%= post.price %></span> 
+                      </h5>
+                      <h5 class="card-title">
+                        Object-ID:<span class="success-span"><%= post._id %></span> 
+                      </h5>
+                  </div>
+                </div>
+              <% }) %>
+
+        </div>
+  
+    </div>
+
+    <!-- bootstrap js link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>

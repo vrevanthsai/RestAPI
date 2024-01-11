@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <br />
+        <h1>Admin Form</h1><br />
+        <form action="/api/products/post" class="admin-form" method="post">
+            <input type="text" name="name" placeholder="Enter Product Name" class="detail" required /><br />
+            <input type="text" name="image" placeholder="Enter Product Image URL" class="detail" required /><br />
+            <input type="text" name="description" placeholder="Enter Product Description" class="detail"
+                required /><br />
+            <input type="number" name="price" placeholder="Enter Product Price" class="detail" required /><br />
+            <input type="text" name="priceid" placeholder="Enter Product Price-id" class="detail" /><br />
+            <input type="text" name="company" placeholder="Enter Product Company-name" class="detail" />
+
+            <input type="submit" class="btn btn-success" value="Submit-Data">
+        </form>
+        <div class="operations">
+            <!-- Form for Query(or Read) Operations(seacrh,sort,pagination(limit=10)) -->
+            <form action="/api/products/testing">
+                <label for="seacrh">Query(Read)-Operations:</label>
+                <!-- <input type="search" name="company" placeholder="search" id=""> -->
+                <input type="search" name="name" placeholder="search product-name" id="search" required>
+                <!-- <input type="search" name="sort" placeholder="search" id=""> -->
+                <!-- <input type="search" name="page" placeholder="search" id=""> -->
+                <input type="submit" value="seacrh">
+            </form>
+            <!-- Form for Delete operations -->
+            <form action="/deleteone" method="post">
+                <label for="deleteone">Delete Operations: </label>
+                <input type="text" name="deleteone" placeholder="Enter Deleted-Product name" id="deleteone" required>
+                <input type="submit" value="submit-delete">
+            </form>
+            <!-- Form for Update operations -->
+            <form action="/updatebyid" method="post">
+                <label for="updatebyid">Update Operations: </label>
+                <input type="text" name="objectid" placeholder="Enter Object-ID" id="updatebyid" required>
+                <!-- <input type="text" name="updatefield" placeholder="Enter Field-name" required> -->
+                <input type="text" name="updatevalue" placeholder="Enter new value of name-field" style="width: 240px;"
+                    required>
+                <input type="submit" value="submit-update">
+            </form>
+        </div>
+    </div>
+
+    <!-- bootstrap js link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
