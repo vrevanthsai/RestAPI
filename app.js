@@ -10,6 +10,11 @@ const products_routes=require("./routes/product");
 const connectDB=require("./db/connect");
 // import productModel
 const Product=require('./models/product');
+// import cors
+const cors=require("cors");
+app.use(cors({
+    origin:"*",
+}))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
